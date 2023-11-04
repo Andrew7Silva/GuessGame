@@ -4,7 +4,13 @@ import BotaoPrincipal from "../components/BotaoPrincipal";
 function StartGameScreen() {
   return (
     <View style={styles.inputContainer}>
-      <TextInput />
+      <TextInput
+        style={styles.numberInput}
+        maxLength={2}
+        keyboardType="number-pad"
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
       <BotaoPrincipal>Resetar</BotaoPrincipal>
       <BotaoPrincipal>Confirmar</BotaoPrincipal>
     </View>
@@ -22,7 +28,18 @@ const styles = StyleSheet.create({
     shadowColor: "black",
     shadowOffset: { width: 2, height: 2 },
     shadowRadius: 6,
-    shadowOpacity: 1
+    shadowOpacity: 1,
+  },
+  numberInput: {
+    height: 50,
+    width: 50,
+    fontSize: 32,
+    borderBottomColor: "#ddb52f",
+    borderBottomWidth: 2,
+    color: "#ddb52f",
+    marginVertical: 8,
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
 
